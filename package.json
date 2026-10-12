@@ -1,0 +1,36 @@
+{
+  "name": "putusan3-scraper",
+  "version": "1.0.0",
+  "description": "Scraper for PK (peninjauan kembali) tax decisions from putusan3.mahkamahagung.go.id — listing crawl, detail metadata, PDF download, and a live CLI progress bar.",
+  "type": "module",
+  "bin": {
+    "putusan3-scraper": "./scraper.mjs",
+    "putusan3-pdf": "./pdf_downloader.mjs",
+    "putusan3-progress": "./progress-bar.mjs"
+  },
+  "scripts": {
+    "scrape": "node scraper.mjs",
+    "scrape:all": "node scraper.mjs --all",
+    "scrape:pdf": "node scraper.mjs --pdf",
+    "pdf": "node pdf_downloader.mjs",
+    "progress": "node progress-bar.mjs",
+    "progress:quick": "./progress.sh"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "putusan",
+    "mahkamah-agung",
+    "pajak",
+    "peninjauan-kembali",
+    "scraper",
+    "indonesia"
+  ],
+  "author": "Agung Sukariman",
+  "license": "MIT",
+  "dependencies": {
+    "cli-progress": "^3.12.0",
+    "playwright-core": "^1.61.1"
+  }
+}
